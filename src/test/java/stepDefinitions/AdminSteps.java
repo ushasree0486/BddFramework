@@ -13,12 +13,12 @@ public class AdminSteps {
     AdminPage adminPage = new AdminPage(driver);
 
     @Given("User launches the OrangeHRM site")
-    public void user_launches_orange_hrm_site() {
+    public void user_launches_the_orange_hrm_site() {
         driver.get("https://opensource-demo.orangehrmlive.com/");
     }
 
-    @And("User logs in with username {string} and password {string}")
-    public void user_logs_in(String username, String password) {
+    @Given("User logs in with username {string} and password {string}")
+    public void user_logs_in_with_username_and_password(String username, String password) {
         loginPage.loginAs(username, password);
     }
 
@@ -27,28 +27,28 @@ public class AdminSteps {
         adminPage.clickAdminMenu();
     }
 
-    @And("User enters {string} in Username field")
-    public void user_enters_username(String username) {
+    @When("User enters {string} in Username field")
+    public void user_enters_in_username_field(String username) {
         adminPage.enterUsername(username);
     }
 
-    @And("User clicks on User Role dropdown")
-    public void user_clicks_user_role_dropdown() {
+    @When("User clicks on User Role dropdown")
+    public void user_clicks_on_user_role_dropdown() {
         adminPage.clickUserRoleDropdown();
     }
 
-    @And("User enters {string} in Employee Name field")
-    public void user_enters_employee_name(String empName) {
-        adminPage.enterEmployeeName(empName);
+    @When("User enters {string} in Employee Name field")
+    public void user_enters_in_employee_name_field(String name) {
+        adminPage.enterEmployeeName(name);
     }
 
-    @And("User clicks on Status dropdown")
-    public void user_clicks_status_dropdown() {
+    @When("User clicks on Status dropdown")
+    public void user_clicks_on_status_dropdown() {
         adminPage.clickStatusDropdown();
     }
 
     @Then("Admin search filters should be ready")
-    public void admin_filters_ready() {
-        System.out.println("Filters are visible and ready to use.");
+    public void admin_search_filters_should_be_ready() {
+        System.out.println("Admin filter inputs completed.");
     }
 }
