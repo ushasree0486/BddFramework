@@ -6,7 +6,7 @@ import org.example.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import utils.DriverFactory;
 
-public class AdminSteps {
+public class AdminLoginSteps {
 
     WebDriver driver = DriverFactory.initDriver();
     LoginPage loginPage = new LoginPage(driver);
